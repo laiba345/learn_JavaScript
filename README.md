@@ -37,3 +37,14 @@ onBeforeUnmount(() => {
 })
 </script>
 ```
+## 在template和script中获取路由信息
+- 直接通过 {{ $route.path }} 编译即可；
+- 在script中获取完整路由信息路径
+```
+import { useRouter } from "vue-router";
+export default {
+setup() {
+  const route = useRouter();
+  console.log(route.currentRoute.value.fullPath)
+}
+```
