@@ -37,7 +37,7 @@ onBeforeUnmount(() => {
 })
 </script>
 ```
-## 在template和script中获取路由信息
+## 2. 在template和script中获取路由信息
 - 直接通过 {{ $route.path }} 编译即可；
 - 在script中获取完整路由信息路径
 ```
@@ -48,3 +48,6 @@ setup() {
   console.log(route.currentRoute.value.fullPath)
 }
 ```
+## 3. 一些知识点
+- template中是可以嵌套template，前提是不要template写完以后，马上嵌套template；
+- 在展示内容的时候，是否想要展示的话，通过v-if来进行判断验证；
